@@ -22,8 +22,11 @@
 
 <div class="md:w-7/12 lg:6/12 relative w-10/12 py-20 mx-auto">
 	{#each text as { title, description }}
-		<Disclosure class="py-2 my-3 bg-slate-300 px-2 rounded-md" let:open>
-			<DisclosureButton class="text-lg font-bold">{title}</DisclosureButton>
+		<Disclosure
+			class="py-2 my-3 bg-orange-100 hover:border-orange-100 border-orange-200 border-2 px-2 rounded-md text-stone-900 shadow-sm"
+			let:open
+		>
+			<DisclosureButton class="text-lg font-semibold text-stone-500">{title}</DisclosureButton>
 			{#if open}
 				<div transition:slide>
 					<DisclosurePanel>{description}</DisclosurePanel>

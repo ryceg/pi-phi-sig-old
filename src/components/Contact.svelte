@@ -1,5 +1,8 @@
 <script lang="ts">
 	import faker from '@faker-js/faker';
+	function submitContact() {
+		alert('Thanks!');
+	}
 </script>
 
 <div
@@ -10,7 +13,7 @@
 			<h2 class="text-4xl lg:text-5xl font-bold leading-tight">Lets talk about everything!</h2>
 			<div class="text-gray-700 mt-8">
 				Hate forms? Send us an
-				<a class="underline" href="mailto:rhysg3@gmail.com"> email </a>
+				<a class="underline" href="mailto:piphisigmafoundation@gmail.com"> email </a>
 				instead.
 			</div>
 		</div>
@@ -58,6 +61,9 @@
 			<button
 				class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:bg-indigo-700"
 				type="submit"
+				on:click={() => {
+					submitContact();
+				}}
 			>
 				Send Message
 			</button>

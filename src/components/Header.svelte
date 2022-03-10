@@ -1,3 +1,17 @@
+<script lang="ts">
+	import { Popover, PopoverButton, PopoverPanel } from '@rgossiaux/svelte-headlessui';
+	import { createPopperActions } from 'svelte-popperjs';
+
+	const [popperRef, popperContent] = createPopperActions();
+
+	// Example Popper configuration
+	const popperOptions = {
+		placement: 'bottom-end',
+		strategy: 'fixed',
+		modifiers: [{ name: 'offset', options: { offset: [0, 10] } }]
+	};
+</script>
+
 <header class="text-gray-600 body-font">
 	<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
 		<a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="./">
@@ -5,10 +19,17 @@
 			<span class="ml-3 text-xl">Pi Phi Sigma</span>
 		</a>
 		<nav class="md:ml-auto flex flex-wrap items-center justify-center text-sm sm:text-base">
-			<a class="mr-5 hover:text-gray-900" href="./about">About</a>
-			<a class="mr-5 hover:text-gray-900" href="./chapters">Chapters</a>
-			<a class="mr-5 hover:text-gray-900" href="./philanthropy">Philanthropy</a>
-			<a class="mr-5 hover:text-gray-900" href="./resources">Resources</a>
+			<Popover>
+				<PopoverButton use={[popperRef]}>Solutions</PopoverButton>
+				<PopoverPanel use={[[popperContent, popperOptions]]}>
+					<a class="mr-5 hover:text-gray-900" href="/about" sveltekit:prefetch>About</a>
+					<a class="mr-5 hover:text-gray-900" href="/chapters" sveltekit:prefetch>Chapters</a>
+					<a class="mr-5 hover:text-gray-900" href="/philanthropy" sveltekit:prefetch
+						>Philanthropy</a
+					>
+					<a class="mr-5 hover:text-gray-900" href="/resources" sveltekit:prefetch>Resources</a>
+				</PopoverPanel>
+			</Popover>
 		</nav>
 		<button
 			href="./membership"

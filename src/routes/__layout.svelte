@@ -1,6 +1,7 @@
 <script>
 	import Header from '../../src/components/Header.svelte';
 	import '../app.css';
+	import Footer from '../components/Footer.svelte';
 </script>
 
 <meta charset="utf-8" />
@@ -8,3 +9,4 @@
 <Header />
 <slot />
 <!-- </div> -->
+<Footer />

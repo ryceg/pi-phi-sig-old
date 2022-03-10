@@ -581,6 +581,11 @@
     stack-utils "2.0.5"
     yazl "2.5.1"
 
+"@popperjs/core@^2.11.2":
+  version "2.11.2"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.2.tgz#830beaec4b4091a9e9398ac50f865ddea52186b9"
+  integrity sha512-92FRmppjjqz29VMJ2dn+xdyXZBrMlE42AV6Kq6BwjWV7CNUW1hs2FtxSNLQE+gJhaZ6AAmYuO9y8dshhcBl7vA==
+
 "@rgossiaux/svelte-headlessui@^1.0.0-beta.12":
   version "1.0.0-beta.12"
   resolved "https://registry.yarnpkg.com/@rgossiaux/svelte-headlessui/-/svelte-headlessui-1.0.0-beta.12.tgz#d7315b138bfa1c223dd546710a4d367bba7b555c"
@@ -2692,6 +2697,11 @@ svelte-hmr@^0.14.9:
   version "0.14.11"
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.14.11.tgz#63d532dc9c2c849ab708592f034765fa2502e568"
   integrity sha512-R9CVfX6DXxW1Kn45Jtmx+yUe+sPhrbYSUp7TkzbW0jI5fVPn6lsNG9NEs5dFg5qRhFNAoVdRw5qQDLALNKhwbQ==
+
+svelte-popperjs@^1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/svelte-popperjs/-/svelte-popperjs-1.2.8.tgz#b6231164c5f4f91bffcfa486a09b05bc0d8e8700"
+  integrity sha512-tbZmJWpNxAuv+kLNopcF9f0MXQeCHLmafl4IyVnPI1IJWjgkHUFTTL2HhVMDrRm6jsy7O/RR6AAVTeYe4p7lTQ==
 
 svelte-preprocess@^4.0.0, svelte-preprocess@^4.10.1:
   version "4.10.4"
