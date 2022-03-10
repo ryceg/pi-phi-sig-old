@@ -2,6 +2,7 @@
 	import { goto } from '$app/navigation';
 	import Contact from '../components/Contact.svelte';
 	import CTA from '../components/CTA.svelte';
+	import Gallery from '../components/Gallery.svelte';
 </script>
 
 <div class="md:w-7/12 lg:6/12 relative w-10/12 py-20 mx-auto">
@@ -13,6 +14,7 @@
 		non-stock corporation, pending certification as a 501(c)(3) nonprofit
 	</p>
 </div>
+<Gallery images={[]} />
 <CTA
 	title="Find out more about our benefits"
 	button="please"
