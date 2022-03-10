@@ -3,7 +3,8 @@
 	import '../app.css';
 </script>
 
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <Header />
-<div class="md:w-7/12 lg:6/12 relative w-10/12 py-20 mx-auto">
-	<slot />
-</div>
+<slot />
+<!-- </div> -->

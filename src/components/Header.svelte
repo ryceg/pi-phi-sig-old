@@ -4,15 +4,16 @@
 			<img src="static/PFS PNG Small.png" alt="PFS Logo" class="w-10" />
 			<span class="ml-3 text-xl">Pi Phi Sigma</span>
 		</a>
-		<nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+		<nav class="md:ml-auto flex flex-wrap items-center justify-center text-sm sm:text-base">
 			<a class="mr-5 hover:text-gray-900" href="./about">About</a>
 			<a class="mr-5 hover:text-gray-900" href="./chapters">Chapters</a>
 			<a class="mr-5 hover:text-gray-900" href="./philanthropy">Philanthropy</a>
 			<a class="mr-5 hover:text-gray-900" href="./resources">Resources</a>
 		</nav>
 		<button
+			href="./membership"
 			class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
-			>Button
+			>Join Now
 			<svg
 				fill="none"
 				stroke="currentColor"
