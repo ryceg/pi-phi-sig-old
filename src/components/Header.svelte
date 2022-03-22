@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Popover, PopoverButton, PopoverPanel } from '@rgossiaux/svelte-headlessui';
+	import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@rgossiaux/svelte-headlessui';
 	import { createPopperActions } from 'svelte-popperjs';
-	import { slide } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	const [popperRef, popperContent] = createPopperActions();
 	// Example Popper configuration
 	const popperOptions = {
@@ -10,6 +10,13 @@
 		modifiers: [{ name: 'offset', options: { offset: [0, 10] } }]
 	};
 	let open;
+	let urls = {
+		About: '/about',
+		FAQ: '/about/faq',
+		PFS: '/about/pfs',
+		'Pi-Phi-Sigma': '/about/pi-phi-sigma',
+		'The Team': '/about/team'
+	};
 </script>
 
 <header class="body-font text-gray-600">
@@ -19,21 +26,28 @@
 			<span class="ml-3 text-xl">Pi Phi Sigma</span>
 		</a>
 		<nav class="md:ml-auto sm:text-base flex flex-wrap items-center justify-center text-sm">
-			<Popover>
-				<PopoverButton use={[popperRef]} let:open>Solutions</PopoverButton>
-				{#if open}
-					<div transition:slide>
-						<PopoverPanel use={[[popperContent, popperOptions]]}>
-							<a class="hover:text-gray-900 mr-5" href="/about" sveltekit:prefetch>About</a>
-							<a class="hover:text-gray-900 mr-5" href="/chapters" sveltekit:prefetch>Chapters</a>
-							<a class="hover:text-gray-900 mr-5" href="/philanthropy" sveltekit:prefetch
-								>Philanthropy</a
+			<PopoverGroup>
+				<Popover let:open>
+					<PopoverButton class="" use={[popperRef]}>About</PopoverButton>
+					{#if open}
+						<div class="" transition:fly>
+							<PopoverPanel
+								static
+								use={[[popperContent, popperOptions]]}
+								class="bg-stone-100 p-2 rounded"
 							>
-							<a class="hover:text-gray-900 mr-5" href="/resources" sveltekit:prefetch>Resources</a>
-						</PopoverPanel>
-					</div>
-				{/if}
-			</Popover>
+								{#each Object.entries(urls) as [key, value]}
+									<a
+										class="hover:bg-gray-200 hover:text-gray-900 block p-2 text-sm text-gray-900"
+										href={value}
+										sveltekit:prefetch>{key}</a
+									>
+								{/each}
+							</PopoverPanel>
+						</div>
+					{/if}
+				</Popover>
+			</PopoverGroup>
 		</nav>
 		<button
 			href="./membership"
