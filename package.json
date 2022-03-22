@@ -1,6 +1,12 @@
 {
 	"name": "pi-phi-sig",
 	"version": "0.0.1",
+	"license": "MIT",
+	"author": {
+		"name": "Rhys Gray",
+		"email": "rhysg3@gmail.com",
+		"url": "http://rhysgraymusic.com"
+	},
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
